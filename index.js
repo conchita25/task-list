@@ -3,7 +3,7 @@ const formulario = document.getElementById("formulario");
     const lista = document.getElementById("lista");
     const mensaje = document.getElementById("mensaje");
 
-    // Recuperar tareas guardadas
+    
     let tareas = [];
 
     try {
@@ -23,12 +23,12 @@ const formulario = document.getElementById("formulario");
       tareas = [];
     }
 
-    // Guardar en localStorage
+    
     function guardarTareas() {
       localStorage.setItem("misTareas", JSON.stringify(tareas));
     }
 
-    // Agregar una tarea
+    
     formulario.addEventListener("submit", function(e) {
       e.preventDefault();
 
@@ -49,7 +49,7 @@ const formulario = document.getElementById("formulario");
       entrada.focus();
     });
 
-    // Mostrar las tareas
+    
     function mostrarTareas() {
       lista.innerHTML = "";
 
@@ -66,7 +66,7 @@ const formulario = document.getElementById("formulario");
           texto.classList.add("completada");
         }
 
-        // Botón completar
+        
         const botonCompletar = document.createElement("button");
         botonCompletar.type = "button";
         botonCompletar.className =
@@ -83,7 +83,7 @@ const formulario = document.getElementById("formulario");
           mostrarTareas();
         });
 
-        // Botón eliminar
+        
         const botonEliminar = document.createElement("button");
         botonEliminar.type = "button";
         botonEliminar.className = "btn btn-danger btn-sm";
@@ -99,7 +99,7 @@ const formulario = document.getElementById("formulario");
         lista.appendChild(elemento);
       });
 
-      // Actualizar estadísticas
+      
       document.getElementById("total").textContent = tareas.length;
 
       document.getElementById("completadas").textContent =
@@ -115,5 +115,5 @@ const formulario = document.getElementById("formulario");
       mensaje.classList.toggle("d-none", tareas.length !== 0);
     }
 
-    // Mostrar las tareas al abrir la página
+    
     mostrarTareas();
