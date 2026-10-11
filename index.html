@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Task List - Lista de tareas</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">      
+</head>
+
+<body>
+  <div class="container py-5">
+
+    <header class="encabezado p-4 mb-4 shadow-sm">
+      <h1>Mi lista de tareas</h1>
+      <p class="mb-0">Organiza tus actividades diarias</p>
+    </header>
+
+    <!-- Formulario -->
+    <div class="card shadow-sm p-4 mb-4">
+      <h4>Agregar tarea</h4>
+
+      <form id="formulario" class="d-flex gap-2">
+        <input
+          type="text"
+          id="tarea"
+          class="form-control"
+          placeholder="Escribe una tarea..."
+          maxlength="200"
+          required
+        >
+
+        <button type="submit" class="btn btn-primary">
+          Agregar
+        </button>
+      </form>
+    </div>
+
+    <!-- Estadísticas -->
+    <div class="row g-3 mb-4 text-center">
+
+      <div class="col-md-4">
+        <div class="card shadow-sm p-3">
+          <h6>Total de tareas</h6>
+          <h2 id="total" class="text-primary">0</h2>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow-sm p-3">
+          <h6>Completadas</h6>
+          <h2 id="completadas" class="text-success">0</h2>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow-sm p-3">
+          <h6>Pendientes</h6>
+          <h2 id="pendientes" class="text-warning">0</h2>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Lista de tareas -->
+    <div class="card shadow-sm p-4">
+      <h4>Mis tareas</h4>
+
+      <ul id="lista" class="list-group list-group-flush mt-3"></ul>
+
+      <p id="mensaje" class="text-secondary mt-3 mb-0">
+        No hay tareas registradas.
+      </p>
+    </div>
+
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>

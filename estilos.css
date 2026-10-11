@@ -1,0 +1,19 @@
+ body {
+      background-color: #f1f3f8;
+    }
+
+    .encabezado {
+      background: linear-gradient(135deg, #6c63ff, #201e30);
+      color: white;
+      border-radius: 15px;
+    }
+
+    .card {
+      border: none;
+      border-radius: 15px;
+    }
+
+    .completada {
+      text-decoration: line-through;
+      color: rgb(45, 192, 160);
+    }
